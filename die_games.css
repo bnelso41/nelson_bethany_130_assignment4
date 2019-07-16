@@ -1,0 +1,29 @@
+#header
+{
+background-color:#DE1738; 
+font-size: 20px; 
+font-family:cursive;
+border-style:dotted;
+border-color:#20A65D;
+width: 500px;
+}
+#problem_one
+{
+background-color:#4B0082;
+border-color:#20A65D;
+border-style:solid;
+width: 500px;
+}
+#problem_two
+{
+background-color:#1A34D5;
+border-color:#20A65D;
+width: 500px;
+}
+#output_results
+{
+background-color:#A1207E;
+border-color:#20A65D;
+border-style:double;
+width: 500px;
+}
