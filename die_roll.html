@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Die games!</title>
+<link rel="stylesheet" type="text/css" href="Die_games.css">
+</head>
+<body>
+<div id="header">
+<h1>Use the script to roll the die...</h1>
+</div>
+<div id="problem_one">
+    <script type="text/javascript">
+        function rollYahtzee()
+{
+    var yfirstDie = (Math.random()*6-1+1) +1;
+    yfirstDie = parseInt(yfirstDie);
+    var ysecondDie = (Math.random()*6) +1;
+    ysecondDie = parseInt(ysecondDie);
+    var ythirdDie = (Math.random()*6) +1;
+    ythirdDie = parseInt(ythirdDie);
+    var yfourthDie = (Math.random()*6) +1;
+    yfourthDie = parseInt(yfourthDie);
+    var yfifthDie = (Math.random()*6) +1;
+    yfifthDie = parseInt(yfifthDie);
+    
+    var dieResults = ("1)" + yfirstDie + " " + "2)" + ysecondDie + " " + "3)" + ythirdDie + " " + "4)" + yfourthDie + " " + "5)" + yfifthDie);
+    document.getElementById("output_results").innerHTML = dieResults;
+
+}
+    </script>
+<input type="button" id="btnYahtzee" onclick="rollYahtzee()" style="background-color:#ffffff;color:#0000FF;width:150px;height:40px;" value="Play Yahtzee!">
+</div>
+    
+<div id="problem_two">
+    <script type="text/javascript">
+        function rollCraps()
+{
+    var cfirstDie = (Math.random()*6) +1;
+    cfirstDie = parseInt(cfirstDie);
+    var csecondDie = (Math.random()*6) +1;
+    csecondDie = parseInt(csecondDie);
+    
+    var snakeEyes = "<h1>Snake Eyes!</h1>";
+    var luckySevens = "<h1>Lucky 7s!</h1>";
+    var highSixes = "<h1>High Sixes!</h1>";
+    var anythingElse = ("1)" + cfirstDie + " " + "2)" + csecondDie);
+    
+    if (cfirstDie == 1 && csecondDie == 1)
+        document.getElementById("output_results").innerHTML = snakeEyes;
+    
+    if (cfirstDie == 2 && csecondDie == 5 || cfirstDie == 5 && csecondDie == 2 || cfirstDie == 1 && cfirstDie == 6 || cfirstDie == 6 && cfirstDie == 1 || cfirstDie == 3 && csecondDie == 4 || cfirstDie == 4 && csecondDie == 3)
+    { document.getELementById("output_results").innerHTML = luckySevens;
+    }
+    if (cfirstDie == 6 && csecondDie == 6)
+        document.getElementById("output_results").innerHTML = highSixes;
+    
+    else
+        document.getElementById("output_results").innerHTML = anythingElse;
+   
+
+}
+    </script>
+    
+<input type="button" id="btnCraps" 
+style="background-color:#ffffff;color:#0000FF;width:150px;height:40px;" value="Roll the Die!"
+onclick="rollCraps()">
+</div>
+    
+<div id="output_results">
+</div>
+    
+</body>
+</html>
