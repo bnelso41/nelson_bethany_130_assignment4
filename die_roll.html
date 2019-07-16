@@ -44,14 +44,15 @@
     var snakeEyes = "<h1>Snake Eyes!</h1>";
     var luckySevens = "<h1>Lucky 7s!</h1>";
     var highSixes = "<h1>High Sixes!</h1>";
+    var sumDie = (cfirstDie + csecondDie);
     var anythingElse = ("1)" + cfirstDie + " " + "2)" + csecondDie);
-    
+
     if (cfirstDie == 1 && csecondDie == 1)
         document.getElementById("output_results").innerHTML = snakeEyes;
     
-    if (cfirstDie == 2 && csecondDie == 5 || cfirstDie == 5 && csecondDie == 2 || cfirstDie == 1 && cfirstDie == 6 || cfirstDie == 6 && cfirstDie == 1 || cfirstDie == 3 && csecondDie == 4 || cfirstDie == 4 && csecondDie == 3)
-    { document.getELementById("output_results").innerHTML = luckySevens;
-    }
+    if (sumDie == 7)
+        document.getELementById("output_results").innerHTML = luckySevens;
+    
     if (cfirstDie == 6 && csecondDie == 6)
         document.getElementById("output_results").innerHTML = highSixes;
     
