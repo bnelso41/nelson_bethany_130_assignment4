@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 <meta charset="utf-8">
 <title>Die games!</title>
-<link rel="stylesheet" type="text/css" href="Die_games.css">
-</head>
+        <link rel="stylesheet" type="text/css" href="Die_games.css">
+    </head>
 <body>
-<div id="header">
+    <div id="header">
 <h1>Use the script to roll the die...</h1>
-</div>
-<div id="problem_one">
+    </div>
+    <div id="problem_one">
     <script type="text/javascript">
         function rollYahtzee()
 {
@@ -30,9 +30,9 @@
 }
     </script>
 <input type="button" id="btnYahtzee" onclick="rollYahtzee()" style="background-color:#ffffff;color:#0000FF;width:150px;height:40px;" value="Play Yahtzee!">
-</div>
+    </div>
     
-<div id="problem_two">
+    <div id="problem_two">
     <script type="text/javascript">
         function rollCraps()
 {
@@ -44,16 +44,15 @@
     var snakeEyes = "<h1>Snake Eyes!</h1>";
     var luckySevens = "<h1>Lucky 7s!</h1>";
     var highSixes = "<h1>High Sixes!</h1>";
-    var sumDie = (cfirstDie + csecondDie);
     var anythingElse = ("1)" + cfirstDie + " " + "2)" + csecondDie);
 
     if (cfirstDie == 1 && csecondDie == 1)
         document.getElementById("output_results").innerHTML = snakeEyes;
     
-    if (sumDie == 7)
-        document.getELementById("output_results").innerHTML = luckySevens;
+    else if ((cfirstDie + csecondDie) == 7)
+        document.getElementById("output_results").innerHTML = luckySevens;
     
-    if (cfirstDie == 6 && csecondDie == 6)
+    else if (cfirstDie == 6 && csecondDie == 6)
         document.getElementById("output_results").innerHTML = highSixes;
     
     else
@@ -66,10 +65,10 @@
 <input type="button" id="btnCraps" 
 style="background-color:#ffffff;color:#0000FF;width:150px;height:40px;" value="Roll the Die!"
 onclick="rollCraps()">
-</div>
+    </div>
     
-<div id="output_results">
-</div>
+    <div id="output_results">
+    </div>
     
 </body>
 </html>
